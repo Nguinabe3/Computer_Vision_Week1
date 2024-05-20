@@ -14,7 +14,7 @@
 
 >> The spatial dimensions of the ouput image (width and height) depend on the spatial dimensions of the input image, kernel_size, padding, and striding. In order to build efficient convolutional networks, it's important to understand what the sizes are after after each convolutional layer.
 
-In this exersise we will derive the dependency between input and output image sizes. For the sake of simplicity we assume that the input tensor is **_square_**, i.e., width = height = image_size. We will use the nn.Conv2d layer here.
+>> In this exersise we will derive the dependency between input and output image sizes. For the sake of simplicity we assume that the input tensor is **_square_**, i.e., width = height = image_size. We will use the nn.Conv2d layer here.
 
 > Lab4
 
@@ -26,12 +26,12 @@ In this exersise we will derive the dependency between input and output image si
 
 >> Batch normalization is tenchique that allows to make training more stable fast [1]. In this lab we define a convolutional network with 3 layers. Before each ReLU layer we insert a BatchNorm2d layer if `use_batch_norm` is `True`. This improves the convergence as guarantees as values have the same variance asn zero-means. As a result on average exactly half of the values will be nulled by ReLU.
 
-[1] Ioffe, Sergey, and Christian Szegedy. "Batch normalization: Accelerating deep network training by reducing internal covariate shift." arXiv preprint arXiv:1502.03167 (2015).
+>> [1] Ioffe, Sergey, and Christian Szegedy. "Batch normalization: Accelerating deep network training by reducing internal covariate shift." arXiv preprint arXiv:1502.03167 (2015).
 
 > Lab6
 
 >> In this lab, we are going train a deep neural network using residual connections [2]. The network below has a list of `conv_blocks`. Each convolutional block is convolution layer followed by a ReLU with optional pooling.
 
-[2] He, Kaiming, et al. "Identity mappings in deep residual networks." European conference on computer vision. Springer, Cham, 2016.
+>> [2] He, Kaiming, et al. "Identity mappings in deep residual networks." European conference on computer vision. Springer, Cham, 2016.
 
 >> Imagenet is the most famous dataset for image classification that is still in use. Real ImageNet dataset is very big (~150Gb). So we will use a smaller version that contains only two classes: bees and ants. First, download the required files and construct the dataset.
